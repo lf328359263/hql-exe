@@ -1,0 +1,57 @@
+2017-04-14 14:37:42 - [ERROR] [main] [com.tuyoo.util.PropertiesUtil] E:\mysite\ideaProjects\impala-count-new\src\main\resources\mysql.properties (系统找不到指定的路径。)
+2017-04-14 14:37:42 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 获取mysql连接。。。
+2017-04-14 14:39:04 - [INFO] [main] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/mysql.properties
+2017-04-14 14:39:04 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 获取mysql连接。。。
+2017-04-14 14:39:08 - [ERROR] [main] [com.tuyoo.util.ConnectionUtils] Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/mysql.properties
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 获取mysql连接。。。
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.source.HqlSource] 本次执行sql数：1
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.main.MainAction] 执行任务数： 1
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 全局元数据刷新
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/impala.properties
+2017-04-14 14:41:01 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 获取impala连接。。。
+2017-04-14 14:41:01 - [INFO] [main] [org.apache.hive.jdbc.Utils] Supplied authorities: 10.3.0.52:21050
+2017-04-14 14:41:01 - [INFO] [main] [org.apache.hive.jdbc.Utils] Resolved authority: 10.3.0.52:21050
+2017-04-14 14:41:01 - [INFO] [main] [org.apache.hive.jdbc.HiveConnection] Will try to open client transport with JDBC Uri: jdbc:hive2://10.3.0.52:21050/;auth=noSasl
+2017-04-14 14:41:06 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 元数据刷新成功
+2017-04-14 14:41:06 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 连接关闭
+2017-04-14 14:41:06 - [INFO] [pool-1-thread-1] [com.tuyoo.executor.Executor] impala执行： select day, game_id, substring(event_param, 1, length(game_id)+3) room_id, user_id, sum(cast(detail_chip as double)) win_chip from bidata_log.coin_log where day = '2017-04-13' and event_id in ('10014','10042','10043','10046','10063','10066','10072','10032','10030','10029','10055','15356','10017','13101','13105','12309','11601','12311','13103','13104','13106','13107','12308','13203','13205','13207','13208','13202','13204') and cast(detail_chip as double) > 0 and game_id in ('8','19','16','23','27','31') and length(event_param) > 1 group by day, game_id, room_id, user_id
+2017-04-14 14:41:06 - [INFO] [pool-1-thread-1] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/impala.properties
+2017-04-14 14:41:06 - [INFO] [pool-1-thread-1] [com.tuyoo.util.ConnectionUtils] 获取impala连接。。。
+2017-04-14 14:41:06 - [INFO] [pool-1-thread-1] [org.apache.hive.jdbc.Utils] Supplied authorities: 10.3.0.52:21050
+2017-04-14 14:41:06 - [INFO] [pool-1-thread-1] [org.apache.hive.jdbc.Utils] Resolved authority: 10.3.0.52:21050
+2017-04-14 14:41:06 - [INFO] [pool-1-thread-1] [org.apache.hive.jdbc.HiveConnection] Will try to open client transport with JDBC Uri: jdbc:hive2://10.3.0.52:21050/;auth=noSasl
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.executor.Executor] sql执行完毕。。。select day, game_id, substring(event_param, 1, length(game_id)+3) room_id, user_id, sum(cast(detail_chip as double)) win_chip from bidata_log.coin_log where day = '2017-04-13' and event_id in ('10014','10042','10043','10046','10063','10066','10072','10032','10030','10029','10055','15356','10017','13101','13105','12309','11601','12311','13103','13104','13106','13107','12308','13203','13205','13207','13208','13202','13204') and cast(detail_chip as double) > 0 and game_id in ('8','19','16','23','27','31') and length(event_param) > 1 group by day, game_id, room_id, user_id
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.sink.JsonMysqlSink] 生成插入语句。。。insert into user_winlose_final (null, day, game_id, room_id, user_id, win_chip) values ('$null', '$day', '$game_id', '$room_id', '$user_id', '$win_chip')
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.sink.JsonMysqlSink] 生成更新语句。。。update user_winlose_final set null = '$null' where day = '$day' and day = '$day' and game_id = '$game_id' and room_id = '$room_id' and user_id = '$user_id' and win_chip = '$win_chip'
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/mysql.properties
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.util.ConnectionUtils] 获取mysql连接。。。
+2017-04-14 14:41:23 - [ERROR] [pool-1-thread-1] [com.tuyoo.sink.JsonMysqlSink] You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null = '$null' where day = '2017-04-13' and day = '2017-04-13' and game_id = '8'' at line 1
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.executor.Executor] 本次impala连接关闭。。。
+2017-04-14 14:41:23 - [INFO] [pool-1-thread-1] [com.tuyoo.main.MainAction] 共需执行 1 个，已完成 1 个
+2017-04-14 14:44:03 - [INFO] [main] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/mysql.properties
+2017-04-14 14:44:03 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 获取mysql连接。。。
+2017-04-14 14:44:04 - [INFO] [main] [com.tuyoo.source.HqlSource] 本次执行sql数：1
+2017-04-14 14:44:04 - [INFO] [main] [com.tuyoo.main.MainAction] 执行任务数： 1
+2017-04-14 14:44:04 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 全局元数据刷新
+2017-04-14 14:44:04 - [INFO] [main] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/impala.properties
+2017-04-14 14:44:04 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 获取impala连接。。。
+2017-04-14 14:44:04 - [INFO] [main] [org.apache.hive.jdbc.Utils] Supplied authorities: 10.3.0.52:21050
+2017-04-14 14:44:04 - [INFO] [main] [org.apache.hive.jdbc.Utils] Resolved authority: 10.3.0.52:21050
+2017-04-14 14:44:04 - [INFO] [main] [org.apache.hive.jdbc.HiveConnection] Will try to open client transport with JDBC Uri: jdbc:hive2://10.3.0.52:21050/;auth=noSasl
+2017-04-14 14:44:08 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 元数据刷新成功
+2017-04-14 14:44:08 - [INFO] [main] [com.tuyoo.util.ConnectionUtils] 连接关闭
+2017-04-14 14:44:08 - [INFO] [pool-1-thread-1] [com.tuyoo.executor.Executor] impala执行： select day, game_id, substring(event_param, 1, length(game_id)+3) room_id, user_id, sum(cast(detail_chip as double)) win_chip from bidata_log.coin_log where day = '2017-04-13' and event_id in ('10014','10042','10043','10046','10063','10066','10072','10032','10030','10029','10055','15356','10017','13101','13105','12309','11601','12311','13103','13104','13106','13107','12308','13203','13205','13207','13208','13202','13204') and cast(detail_chip as double) > 0 and game_id in ('8','19','16','23','27','31') and length(event_param) > 1 group by day, game_id, room_id, user_id
+2017-04-14 14:44:08 - [INFO] [pool-1-thread-1] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/impala.properties
+2017-04-14 14:44:08 - [INFO] [pool-1-thread-1] [com.tuyoo.util.ConnectionUtils] 获取impala连接。。。
+2017-04-14 14:44:08 - [INFO] [pool-1-thread-1] [org.apache.hive.jdbc.Utils] Supplied authorities: 10.3.0.52:21050
+2017-04-14 14:44:08 - [INFO] [pool-1-thread-1] [org.apache.hive.jdbc.Utils] Resolved authority: 10.3.0.52:21050
+2017-04-14 14:44:08 - [INFO] [pool-1-thread-1] [org.apache.hive.jdbc.HiveConnection] Will try to open client transport with JDBC Uri: jdbc:hive2://10.3.0.52:21050/;auth=noSasl
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.executor.Executor] sql执行完毕。。。select day, game_id, substring(event_param, 1, length(game_id)+3) room_id, user_id, sum(cast(detail_chip as double)) win_chip from bidata_log.coin_log where day = '2017-04-13' and event_id in ('10014','10042','10043','10046','10063','10066','10072','10032','10030','10029','10055','15356','10017','13101','13105','12309','11601','12311','13103','13104','13106','13107','12308','13203','13205','13207','13208','13202','13204') and cast(detail_chip as double) > 0 and game_id in ('8','19','16','23','27','31') and length(event_param) > 1 group by day, game_id, room_id, user_id
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.sink.JsonMysqlSink] 生成插入语句。。。insert into user_winlose_final (win_chip, day, game_id, room_id, user_id) values ('$win_chip', '$day', '$game_id', '$room_id', '$user_id')
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.sink.JsonMysqlSink] 生成更新语句。。。update user_winlose_final set win_chip = '$win_chip' where day = '$day' and day = '$day' and game_id = '$game_id' and room_id = '$room_id' and user_id = '$user_id'
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.util.PropertiesUtil] 文件正常加载：E:\mysite\ideaProjects\hql-exe\src\main\resources/mysql.properties
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.util.ConnectionUtils] 获取mysql连接。。。
+2017-04-14 14:44:28 - [ERROR] [pool-1-thread-1] [com.tuyoo.sink.JsonMysqlSink] Table 'dc_manager.user_winlose_final' doesn't exist
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.executor.Executor] 本次impala连接关闭。。。
+2017-04-14 14:44:28 - [INFO] [pool-1-thread-1] [com.tuyoo.main.MainAction] 共需执行 1 个，已完成 1 个
